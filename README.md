@@ -104,7 +104,7 @@ First I'd like to see how many trips are taken by either groups throughout the y
 
 giving us the following output.
 
-![image.png](attachment:1942ee81-3fd5-471d-bd94-6d7683122f56.png)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/8a717bc5-5d6c-4e41-bb45-d41d6bdac8bd)
 
 Across the entire year, we can see that members take approximately 60% of trips. And we can also see how this changes depending on the day of the week using this query:
 
@@ -125,7 +125,8 @@ Across the entire year, we can see that members take approximately 60% of trips.
     FROM trip_counts
     ORDER BY total_trips DESC;
 
-![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/8a717bc5-5d6c-4e41-bb45-d41d6bdac8bd)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/1ee07483-6480-49f0-9e4a-18ecf61716c9)
+
 
 From these results, we can see that the number of trips taken by casual riders exceeds members on Saturdays and Sundays. We also observe that there are more trips on Saturdays than any other day of the week. 
 
@@ -148,7 +149,7 @@ We can also see how this breakdown changes depending on the month with a similar
     FROM trip_counts
     ORDER BY total_trips DESC;
 
-![image.png](attachment:b5a28072-3397-417b-b895-0e421291b733.png)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/d4fe23df-fc3c-4e61-817d-221a046d52c8)
 
 Viewing this table, we can see that the number of trips is greatest in the summer months (May, June, July) and lowest in the winter months(December, January, February). We also see that the share of trips taken by casual riders peaks in the summer months at almost half of all trips and falls to fewer than 1/5 trips in the winter.
 
@@ -173,14 +174,15 @@ I'd also like to see the distribution of when trips begin, what the split is for
         ROUND(member_trips * 100.0 / total_trips, 2) AS member_percentage
     FROM trip_timing;
 
-![image.png](attachment:536c178b-22e1-4b64-945f-2a35b63889ff.png)
+    
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/35946c8f-8a0e-4a39-84b6-c04eb787ae4e)
 
 From the table, we can see there's a larger proportion of members taking trips in the morning and evening, which suggest that there's more members using our service for a commute. We can see how this differs on weekends and weekdays with a small adjustment to the query
 
-![Weekdays](attachment:ee49a963-2e7c-47ba-985c-4bec60ee99b5.png)
+![Weekdays](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/bc8532f5-4650-4613-b28f-1d8b0ee87def)
 Weekdays (Mon-Fri)
 
-![Weekends](attachment:69ad7a82-332d-48f8-8f44-3689ce59c381.png)
+![Weekends](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/bf26eacd-1713-4eeb-a85a-c9e77a59dde9)
 Weekends (Sat & Sun)
 
 Here, we can see a difference in the distribution of trips on weekends and weekdays, where we see a bit of a spike in trips in the mornings and evenings on weekdays, especially amongst members. Whereas on weekends, there isn't a spike in trips and we see that it's fairly well distributed throghout the day, with demand being highest in the early afternoon. This is additional evidence for members being more likely to use our services for their commute to work.
@@ -193,15 +195,15 @@ Using the following SQL query:
     FROM cyclistic_trips_2022.trips_2022
     GROUP BY member_casual;
 
-![image.png](attachment:83621e32-05b0-466b-b5ad-8b77af5dc4c7.png)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/f0b56cac-22ea-4189-8031-125d1f29137a)
 
 we can find the average trip duration based on member status.
 For casual riders, an average trip lasts for 47:30 and for members it is 21:12. We can see how this changes depending on if it's a weekday or a weekend as well.
 
-![Weekdays](attachment:c797b01b-0dfc-470d-8814-6e7543770c90.png) 
+![Weekdays](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/76714e98-30e7-49e6-acdf-efae5436d61e)
 Weekdays (Mon-Fri)
 
-![Weekends](attachment:1081a3c6-03d0-4b85-91f4-0e448230cde4.png)
+![Weekends](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/e7fd25c4-32b8-41ce-8a96-077ead86dc0d)
 Weekends (Sat & Sun)
 
 We can see that trips are typically shorter on weekdays than on weekends for both groups which we would expect if there's a tendency to use our service for leisure rather than commuting on weekends. We can also see that trips are still significantly longer for casual riders than members across the whole week, lending more support to the idea that casual riders are more likely to use our service for leisure.
@@ -219,11 +221,13 @@ Since we don't have data tracking the path that our bikes travel during trips, w
     ORDER BY trip_count DESC
     LIMIT 20;
 
-![Casual](attachment:b62c5597-3803-4774-85ca-4d6125187a66.png)Casual riders
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/70c42c60-25ec-40e0-8260-f20f038d1d22)
+Casual riders
 
 Looking at the casual riders, we see that a lot of the most taken trips involve two stations: *Streeter Dr & Grand Ave* and *DuSable Lake Shore Dr & Monroe St*. If we take a look at Chicago, we can see that both of these are near some large parks and close to a long mixed-use path called Lakefront Trail. A lot of the most used stations are near this path so I believe it's fair to assume that there's a lot of trips taken along the path. Some of the other commonly used stations are for attractions close to the lakeshore such as Adler Planetarium and Shedd Aquarium.
 
-![Member](attachment:ca361e84-1cab-4071-9fd4-0db918eea74f.png)Members
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/0994c887-0ab9-48e7-a6d6-7007c4dfe9ee)
+Members
 
 When we take a look at the members, the first thing that jumps out is that 10 of the top 20 routes either begin or finish on *Ellis Ave* or *University Ave*, these are all around the campus of the *University of Chicago*. We also see that four of the routes involve the station at *State St & 33rd St*, which is where the campus of the *Illinois Institute of Technology* is. Furthermore, of the remaining routes, five of them are centred around the *University of Illinois at Chicago*. This means of the top 20 routes, 19 of them are for arriving at or departing a university. As for the remaining route, it is the only one shared by casual riders and members which begins and finishes at *Streeter Dr & Grand Ave*.
 
@@ -231,7 +235,7 @@ This shows us that our hypothesis that casual riders using our service for leisu
 
 #### Bike Types
 
-![image.png](attachment:32d25c27-63d5-4945-ae07-2668cbe6e069.png)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/ac34ab61-b1e1-4ea9-babe-7839b6715523)
 
 Breaking down how members and casual riders choose a bike type, the data shows that throughout the year there isn't a significant difference in how often each group chooses electric bikes, with both having a bit under 40% of their rides being on e-bikes. One thing of note is that docked bikes are only ridden by casual riders which likely means it's only an option for casual riders. But without any more information on whether those bikes are classic or electric and how they work, I will choose to ignore them from the rest of my analysis. 
 
