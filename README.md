@@ -125,7 +125,7 @@ Across the entire year, we can see that members take approximately 60% of trips.
     FROM trip_counts
     ORDER BY total_trips DESC;
 
-![image.png](attachment:efc2d905-3bb4-485a-9fd1-7ecdbf47c0b1.png)
+![image](https://github.com/GaryYan28/Google-Data-Analytics-Bike-Share-Case-Study/assets/170465501/8a717bc5-5d6c-4e41-bb45-d41d6bdac8bd)
 
 From these results, we can see that the number of trips taken by casual riders exceeds members on Saturdays and Sundays. We also observe that there are more trips on Saturdays than any other day of the week. 
 
